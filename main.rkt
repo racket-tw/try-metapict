@@ -1,50 +1,434 @@
-#lang racket/base
+#reader(lib"read.ss""wxme")WXME0109 ## 
+#|
+   This file uses the GRacket editor format.
+   Open this file in DrRacket version 8.0 or later to read it.
 
-(module+ test
-  (require rackunit))
+   Most likely, it was created by saving a program in DrRacket,
+   and it probably contains a program with non-text elements
+   (such as images or comment boxes).
 
-;; Notice
-;; To install (from within the package directory):
-;;   $ raco pkg install
-;; To install (once uploaded to pkgs.racket-lang.org):
-;;   $ raco pkg install <<name>>
-;; To uninstall:
-;;   $ raco pkg remove <<name>>
-;; To view documentation:
-;;   $ raco docs <<name>>
-;;
-;; For your convenience, we have included LICENSE-MIT and LICENSE-APACHE files.
-;; If you would prefer to use a different license, replace those files with the
-;; desired license.
-;;
-;; Some users like to add a `private/` directory, place auxiliary files there,
-;; and require them in `main.rkt`.
-;;
-;; See the current version of the racket style guide here:
-;; http://docs.racket-lang.org/style/index.html
-
-;; Code here
-
-
-
-(module+ test
-  ;; Any code in this `test` submodule runs when this file is run using DrRacket
-  ;; or with `raco test`. The code here does not run when this file is
-  ;; required by another module.
-
-  (check-equal? (+ 2 2) 4))
-
-(module+ main
-  ;; (Optional) main submodule. Put code here if you need it to be executed when
-  ;; this file is run using DrRacket or the `racket` executable.  The code here
-  ;; does not run when this file is required by another module. Documentation:
-  ;; http://docs.racket-lang.org/guide/Module_Syntax.html#%28part._main-and-test%29
-
-  (require racket/cmdline)
-  (define who (box "world"))
-  (command-line
-    #:program "my-program"
-    #:once-each
-    [("-n" "--name") name "Who to say hello to" (set-box! who name)]
-    #:args ()
-    (printf "hello ~a~n" (unbox who))))
+            http://racket-lang.org/
+|#
+ 34 7 #"wxtext\0"
+3 1 6 #"wxtab\0"
+1 1 8 #"wximage\0"
+2 0 8 #"wxmedia\0"
+4 1 34 #"(lib \"syntax-browser.ss\" \"mrlib\")\0"
+1 0 36 #"(lib \"cache-image-snip.ss\" \"mrlib\")\0"
+1 0 68
+(0
+ #"((lib \"image-core.ss\" \"mrlib\") (lib \"image-core-wxme.rkt\" \"mrl"
+ #"ib\"))\x00"
+) 1 0 16 #"drscheme:number\0"
+3 0 44 #"(lib \"number-snip.ss\" \"drscheme\" \"private\")\0"
+1 0 36 #"(lib \"comment-snip.ss\" \"framework\")\0"
+1 0 79
+(1
+ #"((lib \"srcloc-snip.rkt\" \"framework\") (lib \"wxme-srcloc-snip.rkt"
+ #"\" \"framework\"))\x00"
+) 1 0 93
+(2
+ #"((lib \"collapsed-snipclass.ss\" \"framework\") (lib \"collapsed-snip"
+ #"class-wxme.ss\" \"framework\"))\x00"
+) 0 0 43 #"(lib \"collapsed-snipclass.ss\" \"framework\")\0"
+0 0 19 #"drscheme:sexp-snip\0"
+0 0 29 #"drscheme:bindings-snipclass%\0"
+1 0 101
+(3
+ #"((lib \"ellipsis-snip.rkt\" \"drracket\" \"private\") (lib \"ellipsis"
+ #"-snip-wxme.rkt\" \"drracket\" \"private\"))\x00"
+) 2 0 88
+(4
+ #"((lib \"pict-snip.rkt\" \"drracket\" \"private\") (lib \"pict-snip.rk"
+ #"t\" \"drracket\" \"private\"))\x00"
+) 0 0 55
+#"((lib \"snip.rkt\" \"pict\") (lib \"snip-wxme.rkt\" \"pict\"))\0"
+1 0 34 #"(lib \"bullet-snip.rkt\" \"browser\")\0"
+0 0 25 #"(lib \"matrix.ss\" \"htdp\")\0"
+1 0 22 #"drscheme:lambda-snip%\0"
+1 0 29 #"drclickable-string-snipclass\0"
+0 0 26 #"drracket:spacer-snipclass\0"
+0 0 57
+#"(lib \"hrule-snip.rkt\" \"macro-debugger\" \"syntax-browser\")\0"
+1 0 26 #"drscheme:pict-value-snip%\0"
+0 0 45 #"(lib \"image-snipr.ss\" \"slideshow\" \"private\")\0"
+1 0 38 #"(lib \"pict-snipclass.ss\" \"slideshow\")\0"
+2 0 55 #"(lib \"vertical-separator-snip.ss\" \"stepper\" \"private\")\0"
+1 0 18 #"drscheme:xml-snip\0"
+1 0 31 #"(lib \"xml-snipclass.ss\" \"xml\")\0"
+1 0 21 #"drscheme:scheme-snip\0"
+2 0 34 #"(lib \"scheme-snipclass.ss\" \"xml\")\0"
+1 0 10 #"text-box%\0"
+1 0 32 #"(lib \"text-snipclass.ss\" \"xml\")\0"
+1 0 1 6 #"wxloc\0"
+          0 0 58 0 1 #"\0"
+0 75 1 #"\0"
+0 12 90 -1 90 -1 3 -1 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 255 255 255 1 -1 0 9
+#"Standard\0"
+0 75 6 #"Menlo\0"
+0 14 90 -1 90 -1 3 -1 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 255 255 255 1 -1 2 1
+#"\0"
+0 -1 1 #"\0"
+1 0 -1 -1 -1 -1 -1 -1 0 0 0 0 0 0 1 1 1 1 1 1 0 0 0 0 0 0 -1 -1 2 24
+#"framework:default-color\0"
+0 -1 1 #"\0"
+1 0 -1 -1 -1 -1 -1 -1 0 0 0 0 0 0 0 0 0 1 1 1 0 0 0 0 0 0 -1 -1 2 1
+#"\0"
+0 -1 1 #"\0"
+1 0 -1 -1 -1 -1 -1 -1 0 0 0 0 0 0 0 0 0 1 1 1 150 0 150 0 0 0 -1 -1 2 15
+#"text:ports out\0"
+0 -1 1 #"\0"
+1 0 -1 -1 -1 93 -1 -1 0 1 0 0 0 0 0 0 0 1 1 1 150 0 150 0 0 0 -1 -1 2 1
+#"\0"
+0 -1 1 #"\0"
+1.0 0 -1 -1 93 -1 -1 -1 0 0 0 0 0 0 0 0 0 1.0 1.0 1.0 255 0 0 0 0 0 -1
+-1 2 15 #"text:ports err\0"
+0 -1 1 #"\0"
+1 0 -1 -1 93 -1 -1 -1 0 1 0 0 0 0 0 0 0 1 1 1 255 0 0 0 0 0 -1 -1 2 1
+#"\0"
+0 -1 1 #"\0"
+1 0 -1 -1 -1 -1 -1 -1 0 0 0 0 0 0 0 0 0 1 1 1 0 0 175 0 0 0 -1 -1 2 17
+#"text:ports value\0"
+0 -1 1 #"\0"
+1 0 -1 -1 -1 93 -1 -1 0 1 0 0 0 0 0 0 0 1 1 1 0 0 175 0 0 0 -1 -1 2 1
+#"\0"
+0 -1 1 #"\0"
+1.0 0 92 -1 -1 -1 -1 -1 0 0 0 0 0 0 0 0 0 1.0 1.0 1.0 34 139 34 0 0 0 -1
+-1 2 27 #"Matching Parenthesis Style\0"
+0 -1 1 #"\0"
+1.0 0 92 -1 -1 -1 -1 -1 0 0 0 0 0 0 0 0 0 1.0 1.0 1.0 34 139 34 0 0 0 -1
+-1 2 1 #"\0"
+0 -1 1 #"\0"
+1 0 -1 -1 -1 93 -1 -1 0 1 0 0 0 0 0 0 0 1 1 1 38 38 128 0 0 0 -1 -1 2 37
+#"framework:syntax-color:scheme:symbol\0"
+0 -1 1 #"\0"
+1 0 -1 -1 93 -1 -1 -1 0 0 0 0 0 0 0 0 0 1 1 1 28 25 24 0 0 0 -1 -1 2 38
+#"framework:syntax-color:scheme:keyword\0"
+0 -1 1 #"\0"
+1 0 -1 -1 -1 -1 -1 -1 0 0 0 0 0 0 0 0 0 1 1 1 131 154 204 0 0 0 -1 -1 2
+1 #"\0"
+0 -1 1 #"\0"
+1 0 -1 -1 -1 93 -1 -1 0 1 0 0 0 0 0 0 0 1 1 1 194 116 31 0 0 0 -1 -1 2
+38 #"framework:syntax-color:scheme:comment\0"
+0 -1 1 #"\0"
+1 0 -1 -1 93 -1 -1 -1 0 0 0 0 0 0 0 0 0 1 1 1 160 160 160 0 0 0 -1 -1 2
+1 #"\0"
+0 -1 1 #"\0"
+1 0 -1 -1 -1 93 -1 -1 0 1 0 0 0 0 0 0 0 1 1 1 41 128 38 0 0 0 -1 -1 2 37
+#"framework:syntax-color:scheme:string\0"
+0 -1 1 #"\0"
+1 0 -1 -1 -1 -1 -1 -1 0 0 0 0 0 0 0 0 0 1 1 1 131 154 204 0 0 0 -1 -1 2
+35 #"framework:syntax-color:scheme:text\0"
+0 -1 1 #"\0"
+1 0 -1 -1 -1 93 -1 -1 0 1 0 0 0 0 0 0 0 1 1 1 41 128 38 0 0 0 -1 -1 2 39
+#"framework:syntax-color:scheme:constant\0"
+0 -1 1 #"\0"
+1 0 -1 -1 -1 -1 -1 -1 0 0 0 0 0 0 0 0 0 1 1 1 131 154 204 0 0 0 -1 -1 2
+1 #"\0"
+0 -1 1 #"\0"
+1 0 -1 -1 -1 93 -1 -1 0 1 0 0 0 0 0 0 0 1 1 1 132 60 36 0 0 0 -1 -1 2 49
+#"framework:syntax-color:scheme:hash-colon-keyword\0"
+0 -1 1 #"\0"
+1 0 -1 -1 -1 -1 -1 -1 0 0 0 0 0 0 0 0 0 1 1 1 131 154 204 0 0 0 -1 -1 2
+42 #"framework:syntax-color:scheme:parenthesis\0"
+0 -1 1 #"\0"
+1 0 -1 -1 -1 -1 -1 -1 0 0 0 0 0 0 0 0 0 1 1 1 200 200 200 0 0 0 -1 -1 2
+1 #"\0"
+0 -1 1 #"\0"
+1 0 -1 -1 -1 93 -1 -1 0 1 0 0 0 0 0 0 0 1 1 1 255 0 0 0 0 0 -1 -1 2 36
+#"framework:syntax-color:scheme:error\0"
+0 -1 1 #"\0"
+1 0 -1 -1 -1 -1 -1 -1 0 0 0 0 0 0 0 0 0 1 1 1 242 80 65 0 0 0 -1 -1 2 1
+#"\0"
+0 -1 1 #"\0"
+1 0 -1 -1 -1 93 -1 -1 0 1 0 0 0 0 0 0 0 1 1 1 0 0 0 0 0 0 -1 -1 2 36
+#"framework:syntax-color:scheme:other\0"
+0 -1 1 #"\0"
+1 0 -1 -1 -1 93 -1 -1 0 1 0 0 0 0 0 0 0 1 1 1 0 0 0 0 0 0 -1 -1 2 16
+#"Misspelled Text\0"
+0 -1 1 #"\0"
+1 0 -1 -1 -1 -1 -1 -1 0 0 0 0 0 0 0 0 0 1 1 1 0 0 0 0 0 0 -1 -1 2 1
+#"\0"
+0 -1 1 #"\0"
+1 0 -1 -1 -1 93 -1 -1 0 1 0 0 0 0 0 0 0 1 1 1 81 112 203 0 0 0 -1 -1 2
+38 #"drracket:check-syntax:lexically-bound\0"
+0 -1 1 #"\0"
+1 0 -1 -1 -1 93 -1 -1 0 1 0 0 0 0 0 0 0 1 1 1 81 112 203 0 0 0 -1 -1 2 1
+#"\0"
+0 -1 1 #"\0"
+1 0 -1 -1 -1 93 -1 -1 0 1 0 0 0 0 0 0 0 1 1 1 178 34 34 0 0 0 -1 -1 2 28
+#"drracket:check-syntax:set!d\0"
+0 -1 1 #"\0"
+1 0 -1 -1 -1 93 -1 -1 0 1 0 0 0 0 0 0 0 1 1 1 178 34 34 0 0 0 -1 -1 2 37
+#"drracket:check-syntax:unused-require\0"
+0 -1 1 #"\0"
+1 0 -1 -1 -1 -1 -1 -1 0 0 0 0 0 0 0 0 0 1 1 1 242 80 65 0 0 0 -1 -1 2 36
+#"drracket:check-syntax:free-variable\0"
+0 -1 1 #"\0"
+1 0 -1 -1 -1 93 -1 -1 0 1 0 0 0 0 0 0 0 1 1 1 255 0 0 0 0 0 -1 -1 2 1
+#"\0"
+0 -1 1 #"\0"
+1 0 -1 -1 -1 93 -1 -1 0 1 0 0 0 0 0 0 0 1 1 1 68 0 203 0 0 0 -1 -1 2 31
+#"drracket:check-syntax:imported\0"
+0 -1 1 #"\0"
+1 0 -1 -1 -1 93 -1 -1 0 1 0 0 0 0 0 0 0 1 1 1 68 0 203 0 0 0 -1 -1 2 47
+#"drracket:check-syntax:my-obligation-style-pref\0"
+0 -1 1 #"\0"
+1 0 -1 -1 -1 93 -1 -1 0 1 0 0 0 0 0 0 0 1 1 1 178 34 34 0 0 0 -1 -1 2 1
+#"\0"
+0 -1 1 #"\0"
+1 0 -1 -1 -1 93 -1 -1 0 1 0 0 0 0 0 0 0 1 1 1 0 116 0 0 0 0 -1 -1 2 50
+#"drracket:check-syntax:their-obligation-style-pref\0"
+0 -1 1 #"\0"
+1 0 -1 -1 -1 93 -1 -1 0 1 0 0 0 0 0 0 0 1 1 1 0 116 0 0 0 0 -1 -1 2 48
+#"drracket:check-syntax:unk-obligation-style-pref\0"
+0 -1 1 #"\0"
+1 0 -1 -1 -1 93 -1 -1 0 1 0 0 0 0 0 0 0 1 1 1 0 0 0 0 0 0 -1 -1 2 1
+#"\0"
+0 -1 1 #"\0"
+1 0 -1 -1 -1 93 -1 -1 0 1 0 0 0 0 0 0 0 1 1 1 139 142 28 0 0 0 -1 -1 2
+49 #"drracket:check-syntax:both-obligation-style-pref\0"
+0 -1 1 #"\0"
+1 0 -1 -1 -1 93 -1 -1 0 1 0 0 0 0 0 0 0 1 1 1 139 142 28 0 0 0 -1 -1 2
+26 #"plt:htdp:test-coverage-on\0"
+0 -1 1 #"\0"
+1 0 -1 -1 -1 93 -1 -1 0 1 0 0 0 0 0 0 0 1 1 1 0 0 0 0 0 0 -1 -1 2 1
+#"\0"
+0 -1 1 #"\0"
+1 0 -1 -1 -1 93 -1 -1 0 1 0 0 0 1 0 0 0 0 0 0 255 165 0 0 0 0 -1 -1 2 27
+#"plt:htdp:test-coverage-off\0"
+0 -1 1 #"\0"
+1 0 -1 -1 -1 93 -1 -1 0 1 0 0 0 1 0 0 0 0 0 0 255 165 0 0 0 0 -1 -1 4 1
+#"\0"
+0 70 1 #"\0"
+1.0 0 -1 -1 -1 -1 -1 -1 0 0 0 0 0 0 1.0 1.0 1.0 1.0 1.0 1.0 0 0 0 0 0 0
+-1 -1 4 4 #"XML\0"
+0 70 1 #"\0"
+1.0 0 -1 -1 -1 -1 -1 -1 0 0 0 0 0 0 1.0 1.0 1.0 1.0 1.0 1.0 0 0 0 0 0 0
+-1 -1 2 37 #"plt:module-language:test-coverage-on\0"
+0 -1 1 #"\0"
+1 0 -1 -1 -1 93 -1 -1 0 1 0 0 0 0 0 0 0 1 1 1 0 0 0 0 0 0 -1 -1 2 38
+#"plt:module-language:test-coverage-off\0"
+0 -1 1 #"\0"
+1 0 -1 -1 -1 93 -1 -1 0 1 0 0 0 1 0 0 0 0 0 0 255 165 0 0 0 0 -1 -1 0 36
+#"mrlib/syntax-browser:subtitle-color\0"
+0 -1 1 #"\0"
+1 0 -1 -1 -1 -1 -1 -1 0 0 0 0 0 1 0 0 0 0 0 0 36 36 140 255 255 255 -1
+-1 0 42 #"mrlib/syntax-browser:focused-syntax-color\0"
+0 -1 1 #"\0"
+1 0 -1 -1 -1 -1 -1 -1 0 0 0 0 0 1 0 0 0 0 0 0 34 139 34 255 255 255 -1
+-1 4 1 #"\0"
+0 71 1 #"\0"
+1.0 0 -1 -1 -1 -1 -1 -1 0 0 0 0 0 0 1.0 1.0 1.0 1.0 1.0 1.0 0 0 0 0 0 0
+-1 -1 4 1 #"\0"
+0 -1 1 #"\0"
+1.0 0 -1 -1 -1 -1 -1 -1 1 0 0 0 0 0 0 0 0 1.0 1.0 1.0 0 0 255 0 0 0 -1
+-1 4 1 #"\0"
+0 71 1 #"\0"
+1.0 0 -1 -1 -1 -1 -1 -1 1 0 0 0 0 0 0 0 0 1.0 1.0 1.0 0 0 255 0 0 0 -1
+-1 4 1 #"\0"
+0 71 1 #"\0"
+1.0 0 -1 -1 -1 -1 -1 -1 0 0 0 0 0 0 0 0 0 1.0 1.0 1.0 0 100 0 0 0 0 -1
+-1 4 1 #"\0"
+0 -1 1 #"\0"
+1.0 0 92 -1 -1 -1 -1 -1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 255 255 0 -1 -1
+          0 160 0 28 3 12 #"#lang racket"
+0 0 24 29 1 #"\n"
+0 0 24 29 1 #"\n"
+0 0 24 3 1 #"("
+0 0 15 3 7 #"require"
+0 0 24 3 1 #" "
+0 0 14 3 8 #"metapict"
+0 0 24 3 1 #")"
+0 0 24 29 1 #"\n"
+0 0 24 29 1 #"\n"
+0 0 24 3 1 #"("
+0 0 15 3 3 #"def"
+0 0 24 3 1 #" "
+0 0 14 3 2 #"p1"
+0 0 24 3 2 #" ("
+0 0 14 3 2 #"pt"
+0 0 24 3 3 #"   "
+0 0 21 3 1 #"0"
+0 0 24 3 1 #" "
+0 0 21 3 3 #"100"
+0 0 24 3 2 #"))"
+0 0 24 29 1 #"\n"
+0 0 24 3 1 #"("
+0 0 15 3 3 #"def"
+0 0 24 3 1 #" "
+0 0 14 3 2 #"p2"
+0 0 24 3 2 #" ("
+0 0 14 3 2 #"pt"
+0 0 24 3 1 #" "
+0 0 21 3 3 #"100"
+0 0 24 3 1 #" "
+0 0 21 3 3 #"100"
+0 0 24 3 2 #"))"
+0 0 24 29 1 #"\n"
+0 0 24 3 1 #"("
+0 0 15 3 3 #"def"
+0 0 24 3 1 #" "
+0 0 14 3 2 #"p3"
+0 0 24 3 2 #" ("
+0 0 14 3 2 #"pt"
+0 0 24 3 1 #" "
+0 0 21 3 3 #"200"
+0 0 24 3 1 #" "
+0 0 21 3 3 #"100"
+0 0 24 3 2 #"))"
+0 0 24 29 1 #"\n"
+0 0 24 3 1 #"("
+0 0 15 3 3 #"def"
+0 0 24 3 1 #" "
+0 0 14 3 2 #"p4"
+0 0 24 3 2 #" ("
+0 0 14 3 2 #"pt"
+0 0 24 3 3 #"   "
+0 0 21 3 1 #"0"
+0 0 24 3 3 #"   "
+0 0 21 3 1 #"0"
+0 0 24 3 2 #"))"
+0 0 24 29 1 #"\n"
+0 0 24 3 1 #"("
+0 0 15 3 3 #"def"
+0 0 24 3 1 #" "
+0 0 14 3 2 #"p5"
+0 0 24 3 2 #" ("
+0 0 14 3 2 #"pt"
+0 0 24 3 1 #" "
+0 0 21 3 3 #"100"
+0 0 24 3 3 #"   "
+0 0 21 3 1 #"0"
+0 0 24 3 2 #"))"
+0 0 24 29 1 #"\n"
+0 0 24 3 1 #"("
+0 0 15 3 3 #"def"
+0 0 24 3 1 #" "
+0 0 14 3 2 #"p6"
+0 0 24 3 2 #" ("
+0 0 14 3 2 #"pt"
+0 0 24 3 1 #" "
+0 0 21 3 3 #"200"
+0 0 24 3 3 #"   "
+0 0 21 3 1 #"0"
+0 0 24 3 2 #"))"
+0 0 24 29 1 #"\n"
+0 0 24 29 1 #"\n"
+0 0 24 3 1 #"("
+0 0 15 3 11 #"with-window"
+0 0 24 3 2 #" ("
+0 0 14 3 6 #"window"
+0 0 24 3 1 #" "
+0 0 21 3 3 #"-10"
+0 0 24 3 1 #" "
+0 0 21 3 3 #"210"
+0 0 24 3 1 #" "
+0 0 21 3 2 #"-5"
+0 0 24 3 1 #" "
+0 0 21 3 3 #"105"
+0 0 24 3 1 #")"
+0 0 24 29 1 #"\n"
+0 0 24 3 3 #"  ("
+0 0 14 3 4 #"draw"
+0 0 24 29 1 #"\n"
+0 0 24 3 4 #"   ("
+0 0 14 3 5 #"curve"
+0 0 24 3 1 #" "
+0 0 14 3 2 #"p1"
+0 0 24 3 1 #" "
+0 0 14 3 2 #".."
+0 0 24 3 1 #" "
+0 0 14 3 2 #"p6"
+0 0 24 3 1 #")"
+0 0 24 29 1 #"\n"
+0 0 24 3 4 #"   ("
+0 0 14 3 5 #"curve"
+0 0 24 3 1 #" "
+0 0 14 3 2 #"p2"
+0 0 24 3 1 #" "
+0 0 14 3 2 #".."
+0 0 24 3 1 #" "
+0 0 14 3 2 #"p5"
+0 0 24 3 1 #")"
+0 0 24 29 1 #"\n"
+0 0 24 3 4 #"   ("
+0 0 14 3 5 #"curve"
+0 0 24 3 1 #" "
+0 0 14 3 2 #"p3"
+0 0 24 3 1 #" "
+0 0 14 3 2 #".."
+0 0 24 3 1 #" "
+0 0 14 3 2 #"p4"
+0 0 24 3 3 #")))"
+0 0 24 29 1 #"\n"
+0 16           4 21 1535
+(5
+ #"(100 100 0 100 ((do-set-pen! ((0 0 0 1.0) 1 solid round round #f)) (d"
+ #"o-set-brush! ((255 255 255 1.0) solid #f #f #f)) (set-font (12 #f def"
+ #"ault normal normal #f default #f aligned)) (set-smoothing unsmoothed)"
+ #" (set-text-mode transparent) (set-alpha 1.0) (set-clipping-region #f)"
+ #" (set-background (255 255 255 1.0)) (set-text-background (255 255 255"
+ #" 1.0)) (set-text-foreground (0 0 0 1.0)) (set-smoothing aligned) (set"
+ #"-clipping-region (#t (((((0.0 . 0.0) (100.0 . 0.0) (100.0 . 100.0) (0"
+ #".0 . 100.0)))) . any))) (set-smoothing aligned) (set-smoothing smooth"
+ #"ed) (do-set-brush! ((255 255 255 1.0) transparent #f #f #f)) (draw-pa"
+ #"th (() (4.545454545454546 . 4.545454545454546) #(34.848484848484844 3"
+ #"4.848484848484844 65.15151515151516 65.15151515151516) (95.4545454545"
+ #"4545 . 95.45454545454545)) 0 0 odd-even) (do-set-brush! ((255 255 255"
+ #" 1.0) solid #f #f #f)) (set-smoothing aligned) (set-smoothing smoothe"
+ #"d) (do-set-brush! ((255 255 255 1.0) transparent #f #f #f)) (draw-pat"
+ #"h (() (50.0 . 4.545454545454546) #(50.0 34.848484848484844 50.0 65.15"
+ #"151515151516) (50.0 . 95.45454545454545)) 0 0 odd-even) (do-set-brush"
+ #"! ((255 255 255 1.0) solid #f #f #f)) (set-smoothing aligned) (set-sm"
+ #"oothing smoothed) (do-set-brush! ((255 255 255 1.0) transparent #f #f"
+ #" #f)) (draw-path (() (95.45454545454545 . 4.545454545454546) #(65.151"
+ #"51515151516 34.848484848484844 34.848484848484844 65.15151515151516) "
+ #"(4.545454545454546 . 95.45454545454545)) 0 0 odd-even) (do-set-brush!"
+ #" ((255 255 255 1.0) solid #f #f #f)) (set-smoothing aligned) (set-smo"
+ #"othing aligned)))"
+) 0 0 24 29 1 #"\n"
+0 0 24 3 1 #"("
+0 0 15 3 11 #"with-window"
+0 0 24 3 2 #" ("
+0 0 14 3 6 #"window"
+0 0 24 3 1 #" "
+0 0 21 3 3 #"-10"
+0 0 24 3 1 #" "
+0 0 21 3 3 #"210"
+0 0 24 3 1 #" "
+0 0 21 3 2 #"-5"
+0 0 24 3 1 #" "
+0 0 21 3 3 #"105"
+0 0 24 3 1 #")"
+0 0 24 29 1 #"\n"
+0 0 24 3 3 #"  ("
+0 0 14 3 4 #"draw"
+0 0 24 3 2 #" ("
+0 0 14 3 5 #"curve"
+0 0 24 3 1 #" "
+0 0 14 3 2 #"p1"
+0 0 24 3 1 #" "
+0 0 14 3 2 #".."
+0 0 24 3 1 #" "
+0 0 14 3 2 #"p6"
+0 0 24 3 3 #")))"
+0 0 24 29 1 #"\n"
+0 16           4 21 900
+(6
+ #"(100 100 0 100 ((do-set-pen! ((0 0 0 1.0) 1 solid round round #f)) (d"
+ #"o-set-brush! ((255 255 255 1.0) solid #f #f #f)) (set-font (12 #f def"
+ #"ault normal normal #f default #f aligned)) (set-smoothing unsmoothed)"
+ #" (set-text-mode transparent) (set-alpha 1.0) (set-clipping-region #f)"
+ #" (set-background (255 255 255 1.0)) (set-text-background (255 255 255"
+ #" 1.0)) (set-text-foreground (0 0 0 1.0)) (set-smoothing aligned) (set"
+ #"-clipping-region (#t (((((0.0 . 0.0) (100.0 . 0.0) (100.0 . 100.0) (0"
+ #".0 . 100.0)))) . any))) (set-smoothing aligned) (set-smoothing smooth"
+ #"ed) (do-set-brush! ((255 255 255 1.0) transparent #f #f #f)) (draw-pa"
+ #"th (() (4.545454545454546 . 4.545454545454546) #(34.848484848484844 3"
+ #"4.848484848484844 65.15151515151516 65.15151515151516) (95.4545454545"
+ #"4545 . 95.45454545454545)) 0 0 odd-even) (do-set-brush! ((255 255 255"
+ #" 1.0) solid #f #f #f)) (set-smoothing aligned) (set-smoothing aligned"
+ #")))"
+) 0 0 24 29 1 #"\n"
+0           0
