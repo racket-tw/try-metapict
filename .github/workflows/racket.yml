@@ -4,15 +4,6 @@ on:
   schedule:
     - cron: "0 9 * * *"
   push:
-    branches:
-    - '*'
-    paths:
-    - '**.rkt'
-  pull_request:
-    branches:
-    - '*'
-    paths:
-    - '**.(rkt|scrbl)'
 
 jobs:
   test:
